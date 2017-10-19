@@ -1,0 +1,86 @@
+<html>
+<head>
+  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+
+</head>
+<style>
+.myProgress {
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius:20px;
+  overflow: hidden;
+  border:2px solid #1b1f20;
+
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8cce82+0,75aad6+50,ba82f2+100 */
+background: #8cce82; /* Old browsers */
+background: -moz-linear-gradient(left, #8cce82 0%, #75aad6 50%, #ba82f2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #8cce82 0%,#75aad6 50%,#ba82f2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #8cce82 0%,#75aad6 50%,#ba82f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cce82', endColorstr='#ba82f2',GradientType=1 ); /* IE6-9 */
+}
+
+.myBar {
+  transition:0.9s ease all;
+  width: 1%;
+  position:relative;
+  float:right;
+  right:0;
+  height: 30px;
+  background-color: #8cce82;
+  border:2px solid none;
+}
+.myBarFill{
+  transition:0.9s ease all;
+  width: 30%;
+  height: 30px;
+  background-color: #fff;
+  border:2px solid none;
+
+ 
+}
+</style>
+
+<body>
+
+<h1 style="font-family:helvetica;">JavaScript Progress Bar</h1>
+
+<div class="myProgress">
+  <div class="myBar"></div>
+</div>
+
+<br>
+<button onclick="fadeOut()">Click Me</button> 
+
+<script>
+
+
+function fadeIn(){
+  $('.myBar').addClass('myBarFill')
+}
+setTimeout(fadeIn, 500);
+
+function fadeOut(){
+  $('.myBar').removeClass('myBarFill')
+}
+
+// function move() {
+//   var elem = document.getElementById("myBar");   
+//   var width = 1;
+//   var id = setInterval(frame, 10);
+//   function frame() {
+//     if (width >= 100) {
+//       clearInterval(id);
+//     } else {
+//       width++; 
+//       elem.style.width = width + '%'; 
+//     }
+//   }
+// }
+
+
+</script>
+
+</body>
+</html>

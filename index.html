@@ -1,0 +1,128 @@
+<html>
+<head>
+  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+
+</head>
+<style>
+/* These elements will loop and iterate by 1 */
+.myProgress1 {
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius:20px;
+  overflow: hidden;
+  border:2px solid #1b1f20;
+
+}
+.myProgress2 {
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius:20px;
+  overflow: hidden;
+  border:2px solid #1b1f20;
+
+}
+.myProgress3 {
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius:20px;
+  overflow: hidden;
+  border:2px solid #1b1f20;
+
+}
+/* End loop */
+
+.myBar {
+  transition:0.9s ease all;
+  width: 1%;
+  height: 30px;
+  background-color: #8cce82;
+  border:2px solid none;
+  border-radius:20px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  
+}
+.myBarFill{
+  transition:0.9s ease all;
+  width: 30%;
+  height: 30px;
+  background-color: #fff;
+  border:2px solid none;
+  border-radius:20px;
+   border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  
+background: green; /* Old browsers */
+background: -moz-linear-gradient(left, #8cce82 0%, #75aad6 50%, #ba82f2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #8cce82 0%,#75aad6 50%,#ba82f2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #8cce82 0%,#75aad6 50%,#ba82f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cce82', endColorstr='#ba82f2',GradientType=1 ); /* IE6-9 */
+
+}
+/* These elements will also loop and iterate by 1 */
+.myProgress1 .myBarFill{
+width: 80%;
+  }
+  .myProgress2 .myBarFill{
+width: 20%;
+  }
+  .myProgress3 .myBarFill{
+width: 30%;
+  }
+  /* Loop 2 end */
+</style>
+
+<body>
+
+<h1 style="font-family:helvetica;">JavaScript Progress Bar</h1>
+
+<div style="max-width:480px; margin:auto;">
+<div class="myProgress1">
+  <div class="myBar"></div>
+</div>
+<br>
+<div class="myProgress2">
+  <div class="myBar"></div>
+</div>
+<br>
+<div class="myProgress3">
+  <div class="myBar"></div>
+</div>
+</div>
+
+<br>
+<button onclick="fadeOut()">Clear</button> 
+
+<script>
+
+
+function fadeIn(){
+  $('.myBar').addClass('myBarFill')
+}
+setTimeout(fadeIn, 500);
+
+function fadeOut(){
+  $('.myBar').removeClass('myBarFill')
+}
+
+// function move() {
+//   var elem = document.getElementById("myBar");   
+//   var width = 1;
+//   var id = setInterval(frame, 10);
+//   function frame() {
+//     if (width >= 100) {
+//       clearInterval(id);
+//     } else {
+//       width++; 
+//       elem.style.width = width + '%'; 
+//     }
+//   }
+// }
+
+
+</script>
+
+</body>
+</html>
