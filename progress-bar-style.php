@@ -1,5 +1,5 @@
 <?php
-switch (4) {
+switch (2) {
     case 2:
     $cs_00="#F2F2F2";
     $cs_01="#F2F2F2";
@@ -113,9 +113,11 @@ echo "
 for ($i=0; $i<=$total; $i++){
   echo "
 .myProgress$i {
+  z-index:30;
+  margin-top:-10px;
   width: 50%;
-  margin-left:40%;
-  background-color: rgba(0,0,0,0.8);
+  margin-left:45%;
+  background-color: rgba(0,0,0,0.2);
   border-radius:20px;
   overflow: hidden;
   border:2px solid transparent;
@@ -126,9 +128,10 @@ for ($i=0; $i<=$total; $i++){
 /* general styling */
 echo "
 .myBar {
+  z-index:30;
   transition:0.9s ease all;
   width: 1%;
-  height: 30px;
+  height: 20px;
   background-color: $cs_00;
   border:2px solid none;
   border-radius:20px;
@@ -137,9 +140,10 @@ echo "
   
 }
 .myBarFill{
+  z-index:30;
   transition:0.9s ease all;
   width: 0%;
-  height: 30px;
+  height: 20px;
   background-color: #fff;
   border:2px solid none;
   border-radius:20px;
